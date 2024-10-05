@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #C4DAD2;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #16423C;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    color: #151515;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links li a {
+    color: #151515;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #C4DAD2;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background-color: #6A9C89;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section */
+.services {
+    padding: 2rem 1rem;
+    background-color: #6A9C89;
+    text-align: center;
+}
+
+.services h1 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: #16423C;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    justify-content: center; /* Center cards */
+    gap: 10px;
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Adjusted width for responsiveness */
+    margin: 10px; /* Adjust margin */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #16423C;
+}
+
+.card p {
+    font-size: 1em;
+    color: #16423C; /* Adjusted text color for visibility */
+}
+
+/* Features Section */
+.features-section {
+    padding: 50px;
+    background-color: #C4DAD2;
+    text-align: center;
+}
+
+.features-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center feature cards */
+    gap: 20px;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjusted width for responsiveness */
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.icon-circle {
+    background-color: #00796b;
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+.icon-circle i {
+    font-size: 2rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    color: #6A9C89;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer Section */
+.footer {
+    background: #C4DAD2;
+    color: #16423C;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Responsive Styles for Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar .main {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .main .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #C4DAD2;
+        margin: 5px;
+    }
+
+    .navbar.show .nav-links {
+        display: flex;
+    }
+}
+
+
+    .card-container {
+        flex-direction: column; /* Stack cards */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 90%; /* Full width for smaller screens */
+    }
+
+    .feature-card {
+        width: 90%; /* Full width for smaller screens */
+    }
+
+    .features-section {
+        padding: 20px; /* Reduce padding */
+    }
+
+    .services h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+}
+
+.footer-bottom {
+    background-color: #6A9C89;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Unique Wave Effect */
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/6LKQhKk.png');
+    background-size: cover;
+    animation: wave-animation 4s infinite ease-in-out;
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
